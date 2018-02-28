@@ -121,21 +121,17 @@ def game_hash
     end
 
  def num_points_scored(name)
-   game_hash.each do |location, team_data| 
+   game_hash.each do |location, team_data|
      if team_data[:players].keys.include?(player_name)
        puts team_data[:players][:player_name][:points]
-     end 
+     end
    end
  end
 
- def shoe_size(name) 
-   game_hash.each do |location, team_data| 
+ def shoe_size(name)
+   game_hash.each do |location, team_data|
      if team_data[:players].keys.include?(player_name)
        puts team_data[:players][:player_name][:shoe]
-     end 
+     end
    end
  end
-   
-
-
-
