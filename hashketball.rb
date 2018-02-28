@@ -164,22 +164,5 @@ def game_hash
    home_players + away_players
  end
 
- def team_names
-   teams.map do |team|
-     team[:team_name]
-   end
- end
+ 
 
- def player_numbers(team_name)
-   find_the_team(team_name)[:players].map do |player|
-     player[:number]
-   end
- end
-
- def player_stats(player_name)
-   find_the_player(player_name).reject { |key, value| key == :player_name }
- end
-
- def find_the_player(name)
-   players.find {|player| player.fetch(:player_name) == name}
- end
